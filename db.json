@@ -1,0 +1,57 @@
+{
+  "questionnaire": [
+    {
+      "id": 1,
+      "question": "Who do you want to insure?",
+      "options": {
+        "a": "My family without children",
+        "b": "Me without a child",
+        "c": "My family without children",
+        "d": "Me and my Partner",
+        "e": "Me with a child"
+      }
+    },
+    {
+      "id": 2,
+      "question": "Are you a civil servant or employed in the public sector?",
+      "options": {
+        "a": "Yes",
+        "b": "No"
+      }
+    },
+    {
+      "id": 3,
+      "question": "Would you like to secure bad debt cover?",
+      "options": {
+        "a": "Yes",
+        "b": "No"
+      }
+    },
+    {
+      "id": 4,
+      "question": "How important is it to you to be insured against damage to rented property?",
+      "options": {
+        "a": "Important",
+        "b": "UnImportant"
+      }
+    },
+    {
+      "id": 5,
+      "question": "Are you the owner of one or more properties?",
+      "options": {
+        "a": "Yes",
+        "b": "No"
+      }
+    },
+    {
+      "id": 5,
+      "question": " Do you own a property you live in?",
+      "options": {
+        "a": "Yes Domestic",
+        "b": "Yes abroad",
+        "c": "Yes, domestically and internationally",
+        "d": "No"
+      }
+    }
+  ]
+}
