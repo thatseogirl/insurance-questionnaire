@@ -3,6 +3,7 @@
     {
       "id": 1,
       "question": "Who do you want to insure?",
+      "validation": "*",
       "options": {
         "a": "My family without children",
         "b": "Me without a child",
@@ -44,7 +45,7 @@
       }
     },
     {
-      "id": 5,
+      "id": 6,
       "question": " Do you own a property you live in?",
       "options": {
         "a": "Yes Domestic",

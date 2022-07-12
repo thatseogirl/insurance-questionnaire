@@ -9,6 +9,7 @@ const theme = {
     sideNav: '#2954A9',
     body: '#fff',
     question: '#fff',
+    before: '#bec7ef'
   },
 
   mobile: '768px',
