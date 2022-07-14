@@ -20,6 +20,7 @@ function App() {
   const [currentQuestionPosition, setCurrentQuestionPosition] = useState(0);
   const [isChecked, setIsChecked] = useState(false);
   const [width, setWidth] = useState(0)
+  const [totalQuestions, setTotalQuestions] = useState(0)
 
   //getFetched Data
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
       const questionFromServer = await fetchQuestions();
       const result = questionFromServer[currentQuestionPosition];
       setQuestions(result);
+      setTotalQuestions(questionFromServer.length);
     };
     getQuestion();
   }, [currentQuestionPosition]);
@@ -68,6 +70,7 @@ function App() {
             isChecked={handleChange}
             width={width}
             currentQuestionPosition={currentQuestionPosition}
+            totalQuestions={totalQuestions}
           />
         </Container>
       </>

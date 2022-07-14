@@ -99,3 +99,14 @@ export const ButtonNext = styled.button`
     background-color: #222;
   }
 `;
+
+export const FeedBack = styled.div`
+ display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+ margin-top: 7em;
+ font-weight: bold;
+ font-size: 4vh; 
+ `;
+
