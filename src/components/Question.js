@@ -1,62 +1,34 @@
+import Data from "./Data";
 import {
     QuestionStyle,
     Flex,
-    ProgressBar,
+
     ButtonPrev,
     ButtonNext,
-    ProgressContainer,
-    QuestionnaireSection,
-    Grid,
-    Border,
-    Text,
-} from "./styles/Question.styled";
-import { BiRightArrowAlt } from "react-icons/bi";
 
-export default function Question() {
+} from "./styles/Question.styled";
+import Progress from "./Progress";
+
+export default function Question({
+    questions,
+    nextQuestion,
+    prevQuestion,
+    width,
+    currentQuestionPosition
+}) {
     return (
         <QuestionStyle>
-            <ProgressContainer>
-                <ProgressBar></ProgressBar>
-            </ProgressContainer>
+            <Progress width={width} />
 
-            <QuestionnaireSection>
-                <Text>
-                    <BiRightArrowAlt
-                        style={{
-                            fontSize: "25px",
-                            display: "inline-block",
-                        }}
-                    />
-                    <span>What do you want to insure? *</span>
-                </Text>
-
-                <Grid>
-                    <Border>
-                        <input type='checkbox' />
-                        <label htmlFor='question'>Question</label>
-                    </Border>
-                    <Border>
-                        <input type='checkbox' />
-                        <label htmlFor='question'>Question</label>
-                    </Border>
-                    <Border>
-                        <input type='checkbox' />
-                        <label htmlFor='question'>Question</label>
-                    </Border>
-                    <Border>
-                        <input type='checkbox' />
-                        <label htmlFor='question'>Question</label>
-                    </Border>
-                    <Border>
-                        <input type='checkbox' />
-                        <label htmlFor='question'>Question</label>
-                    </Border>
-                </Grid>
-            </QuestionnaireSection>
+            <Data questions={questions} />
 
             <Flex>
-                <ButtonPrev disabled>Prev</ButtonPrev>
-                <ButtonNext>Next</ButtonNext>
+                <ButtonPrev disabled={currentQuestionPosition === 0} onClick={prevQuestion}>
+                    Prev
+                </ButtonPrev>
+                <ButtonNext onClick={nextQuestion}>
+                    Next
+                </ButtonNext>
             </Flex>
         </QuestionStyle>
     );

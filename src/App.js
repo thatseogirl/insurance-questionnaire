@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import Question from "./components/Question";
 import SideNavigation from "./components/SideNavigation";
@@ -6,22 +7,68 @@ import GlobalStyle from "./components/styles/GlobalStyle.styled";
 
 const theme = {
   colors: {
-    sideNav: '#2954A9',
-    body: '#fff',
-    question: '#fff',
-    before: '#bec7ef'
+    sideNav: "#2954A9",
+    body: "#fff",
+    question: "#fff",
+    before: "#bec7ef",
   },
 
-  mobile: '768px',
-}
+  mobile: "768px",
+};
 function App() {
+  const [questions, setQuestions] = useState([]);
+  const [currentQuestionPosition, setCurrentQuestionPosition] = useState(0);
+  const [isChecked, setIsChecked] = useState(false);
+  const [width, setWidth] = useState(0)
+
+  //getFetched Data
+  useEffect(() => {
+    const getQuestion = async () => {
+      const questionFromServer = await fetchQuestions();
+      const result = questionFromServer[currentQuestionPosition];
+      setQuestions(result);
+    };
+    getQuestion();
+  }, [currentQuestionPosition]);
+
+  //fetch data
+  const fetchQuestions = async () => {
+    const respond = await fetch("http://localhost:5000/questionnaire");
+    const data = await respond.json();
+    return data;
+  };
+
+  //go to previous questions
+  const prevQuestion = async () => {
+    setCurrentQuestionPosition(currentQuestionPosition - 1);
+    setWidth((currentQuestionPosition - 1) * 10 + "%");
+  };
+
+  //go to next question
+  const nextQuestion = async () => {
+    setCurrentQuestionPosition(currentQuestionPosition + 1);
+    setWidth((currentQuestionPosition + 1) * 10 + "%");
+  };
+
+  //handle radio
+  const handleChange = () => {
+    setIsChecked(!isChecked);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
         <Container>
           <SideNavigation />
-          <Question />
+          <Question
+            questions={questions}
+            nextQuestion={nextQuestion}
+            prevQuestion={prevQuestion}
+            isChecked={handleChange}
+            width={width}
+            currentQuestionPosition={currentQuestionPosition}
+          />
         </Container>
       </>
     </ThemeProvider>

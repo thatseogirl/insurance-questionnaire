@@ -4,55 +4,77 @@
       "id": 1,
       "question": "Who do you want to insure?",
       "validation": "*",
-      "options": {
-        "a": "My family without children",
-        "b": "Me without a child",
-        "c": "My family without children",
-        "d": "Me and my Partner",
-        "e": "Me with a child"
-      }
+      "a": "My family with children",
+      "b": "Me without a child",
+      "c": "My family without children",
+      "d": "Me and my Partner",
+      "e": "Me with a child"
     },
     {
       "id": 2,
       "question": "Are you a civil servant or employed in the public sector?",
-      "options": {
-        "a": "Yes",
-        "b": "No"
-      }
+      "a": "Yes",
+      "b": "No"
     },
     {
       "id": 3,
       "question": "Would you like to secure bad debt cover?",
-      "options": {
-        "a": "Yes",
-        "b": "No"
-      }
+      "a": "Yes",
+      "b": "No"
     },
     {
       "id": 4,
       "question": "How important is it to you to be insured against damage to rented property?",
-      "options": {
-        "a": "Important",
-        "b": "UnImportant"
-      }
+      "a": "important",
+      "b": "Unimportant"
     },
     {
       "id": 5,
       "question": "Are you the owner of one or more properties?",
-      "options": {
-        "a": "Yes",
-        "b": "No"
-      }
+      "validation": "*",
+      "a": "Yes",
+      "b": "No"
     },
     {
       "id": 6,
-      "question": " Do you own a property you live in?",
-      "options": {
-        "a": "Yes Domestic",
-        "b": "Yes abroad",
-        "c": "Yes, domestically and internationally",
-        "d": "No"
-      }
+      "question": "Do you own a property you live in?",
+      "a": "Yes Domestic",
+      "b": "Yes abroad",
+      "c": "Yes, domestically and internationally",
+      "d": "No"
+    },
+    {
+      "id": 7,
+      "question": "Do you have one or more rented properties?",
+      "a": "Yes Domestic",
+      "b": "Yes abroad",
+      "c": "Yes, domestically and internationally",
+      "d": "No"
+    },
+    {
+      "id": 8,
+      "question": "Would you like to build or remodel something in the near future?",
+      "a": "Yes",
+      "b": "No"
+    },
+    {
+      "id": 9,
+      "question": "How important is it to you to protect yourself against losing your keys at work?",
+      "a": "important",
+      "b": "Unimportant"
+    },
+    {
+      "id": 10,
+      "question": "Do you want to secure the loss of private keys?",
+      "a": "Yes",
+      "b": "No"
+    },
+    {
+      "id": 11,
+      "question": "Would you like to be insured abroad?",
+      "a": "Yes, up to a months",
+      "b": "Yes, several months",
+      "c": "No"
     }
   ]
 }
