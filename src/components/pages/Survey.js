@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonNext, FeedBack, Flex } from "./styles/Question.styled";
+import { ButtonNext, FeedBack, Flex } from "../styles/Question.styled";
 
 export default function Survey() {
     return (

@@ -4,7 +4,7 @@ import {
     Flex,
     ButtonPrev,
     ButtonNext,
-} from "./styles/Question.styled";
+} from "../styles/Question.styled";
 import Progress from "./Progress";
 import Survey from "./Survey";
 

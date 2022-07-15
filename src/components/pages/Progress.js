@@ -1,4 +1,4 @@
-import { ProgressContainer, ProgressBar } from "./styles/Question.styled";
+import { ProgressContainer, ProgressBar } from "../styles/Question.styled";
 
 export default function Progress({ width }) {
     return (
