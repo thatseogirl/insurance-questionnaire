@@ -13,7 +13,7 @@ const theme = {
     before: "#bec7ef",
   },
 
-  mobile: "768px",
+  mobile: "990px",
 };
 function App() {
   // ..
@@ -50,7 +50,7 @@ function App() {
     setShake(true);
 
     // Buttons stops to shake after 2 seconds
-    setTimeout(() => setShake(false), 500);
+    setTimeout(() => setShake(false), 400);
   };
 
   //go to next question
@@ -60,7 +60,7 @@ function App() {
     setShake(true);
 
     // Buttons stops to shake after 2 seconds
-    setTimeout(() => setShake(false), 500);
+    setTimeout(() => setShake(false), 400);
   };
 
   //handle radio

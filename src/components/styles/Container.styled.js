@@ -9,4 +9,7 @@ export const Container = styled.div`
   height: 80vh;
   margin: 0 auto;
   margin-top: 50px;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 99%;
+  }
 `;

@@ -6,4 +6,8 @@ export const SideNav = styled.nav`
   left: 0;
   width: 33%;
   height: 100%;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    display: none;
+  }
 `;

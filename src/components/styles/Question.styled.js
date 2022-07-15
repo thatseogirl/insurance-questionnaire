@@ -8,6 +8,10 @@ export const QuestionStyle = styled.section`
   width: 63%;
   height: 90%;
   margin-top: 20px;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 90%;
+    right: 5%;
+  }
 `;
 
 export const ProgressBar = styled.div`
@@ -34,6 +38,9 @@ export const ProgressContainer = styled.div`
 
 export const QuestionnaireSection = styled.div`
   padding: 5em 3em;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    padding: 3em 0.75em;
+  }
 `;
 
 export const Text = styled.h3`
@@ -51,6 +58,10 @@ export const Grid = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 10px 35px;
   padding: 1em 0.25em;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+ grid-template-columns: 1fr;
+ gap: 20px;
+  }
 `;
 
 export const Border = styled.div`
