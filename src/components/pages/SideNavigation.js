@@ -1,4 +1,4 @@
-import { SideNav } from "./styles/SideNav.styled";
+import { SideNav } from "../styles/SideNav.styled";
 
 export default function SideNavigation() {
     return (

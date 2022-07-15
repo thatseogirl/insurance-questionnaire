@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
-import Question from "./components/Question";
-import SideNavigation from "./components/SideNavigation";
+import Question from "./components/pages/Question";
+import SideNavigation from "./components/pages/SideNavigation";
 import { Container } from "./components/styles/Container.styled";
 import GlobalStyle from "./components/styles/GlobalStyle.styled";
 

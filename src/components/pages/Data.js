@@ -3,7 +3,7 @@ import {
     Grid,
     Border,
     Text,
-} from "./styles/Question.styled";
+} from "../styles/Question.styled";
 
 import { BiRightArrowAlt } from "react-icons/bi";
 
