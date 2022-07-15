@@ -16,6 +16,8 @@ const theme = {
   mobile: "768px",
 };
 function App() {
+  // ..
+
   const [questions, setQuestions] = useState([]);
   const [currentQuestionPosition, setCurrentQuestionPosition] = useState(0);
   const [width, setWidth] = useState(0);
@@ -48,7 +50,7 @@ function App() {
     setShake(true);
 
     // Buttons stops to shake after 2 seconds
-    setTimeout(() => setShake(false), 2000);
+    setTimeout(() => setShake(false), 500);
   };
 
   //go to next question
@@ -58,7 +60,7 @@ function App() {
     setShake(true);
 
     // Buttons stops to shake after 2 seconds
-    setTimeout(() => setShake(false), 1000);
+    setTimeout(() => setShake(false), 500);
   };
 
   //handle radio
