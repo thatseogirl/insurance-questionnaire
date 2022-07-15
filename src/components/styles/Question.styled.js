@@ -88,11 +88,12 @@ export const ButtonPrev = styled.button`
   border-radius: 5px;
   cursor: pointer;
   background-color: #e8e8e8;
-  color: grey;
+  color: #777;
   font-weight: bold;
+  text-align: center;
 
   &:hover {
-    background-color: #222;
+    background-color: #0f293b;
     color: #fff;
   }
 `;
@@ -105,9 +106,11 @@ export const ButtonNext = styled.button`
   background-color: #2955a8;
   color: #fff;
   font-weight: bold;
+  text-align: center;
 
   &:hover {
-    background-color: #222;
+    background-color: #0f293b;
+    color: #fff;
   }
 `;
 
@@ -119,4 +122,7 @@ export const FeedBack = styled.div`
   margin-top: 7em;
   font-weight: bold;
   font-size: 4vh;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+  font-size: 3vh;
+  }
 `;

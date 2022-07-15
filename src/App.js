@@ -16,8 +16,6 @@ const theme = {
   mobile: "990px",
 };
 function App() {
-  // ..
-
   const [questions, setQuestions] = useState([]);
   const [currentQuestionPosition, setCurrentQuestionPosition] = useState(0);
   const [width, setWidth] = useState(0);
@@ -47,26 +45,24 @@ function App() {
   const prevQuestion = async () => {
     setCurrentQuestionPosition(currentQuestionPosition - 1);
     setWidth((currentQuestionPosition - 1) * 10 + "%");
-    setShake(true);
-
-    // Buttons stops to shake after 2 seconds
-    setTimeout(() => setShake(false), 400);
+    animate()
   };
 
   //go to next question
   const nextQuestion = async () => {
     setCurrentQuestionPosition(currentQuestionPosition + 1);
     setWidth((currentQuestionPosition + 1) * 10 + "%");
-    setShake(true);
-
-    // Buttons stops to shake after 2 seconds
-    setTimeout(() => setShake(false), 400);
+    animate()
   };
 
   //handle radio
   const handleChange = () => {
     setIsChecked(!isChecked);
   };
+  const animate = () => {
+    setShake(!shake);
+    setTimeout(() => setShake(false), 400);
+  }
 
   return (
     <ThemeProvider theme={theme}>

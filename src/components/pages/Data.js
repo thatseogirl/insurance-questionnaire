@@ -10,7 +10,7 @@ import { BiRightArrowAlt } from "react-icons/bi";
 export default function Data({ questions, handleChange }) {
     return (
         <>
-            <QuestionnaireSection key={questions.id}>
+            <QuestionnaireSection>
                 <Text>
                     <BiRightArrowAlt
                         style={{
@@ -23,16 +23,15 @@ export default function Data({ questions, handleChange }) {
                         {questions.validation}
                     </span>
                 </Text>
-
                 <Grid>
-                    <Border>
-                        <input type='checkbox' onChange={handleChange} value='a' />
-                        <label htmlFor='question'>{questions.a}</label>
-                    </Border>
-                    <Border>
-                        <input type='checkbox' onChange={handleChange} value='b' />
-                        <label htmlFor='question'>{questions.b}</label>
-                    </Border>
+                    {questions.options && Object.keys(questions.options).map((optionKey, optionIndex) => {
+                        return (
+                            <Border key={optionIndex}>
+                                <input type='checkbox' onChange={handleChange} value='a' />
+                                <label htmlFor='question'>{questions.options[optionKey]}</label>
+                            </Border>
+                        );
+                    })}
                 </Grid>
             </QuestionnaireSection>
         </>

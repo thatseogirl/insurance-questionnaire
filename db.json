@@ -4,63 +4,89 @@
       "id": 1,
       "question": "Who do you want to insure?",
       "validation": "*",
-      "a": "My family with children",
-      "b": "Me and my Partner"
+      "options": {
+        "a": "My family with children",
+        "b": "Me and my Partner",
+        "c": "Me and my child",
+        "d":  "Me alone"
+      }
     },
     {
       "id": 2,
       "question": "Are you a civil servant or employed in the public sector?",
-      "a": "Yes",
-      "b": "No"
+      "options":{
+         "a": "Yes",
+        "b": "No"
+      }
     },
     {
       "id": 3,
       "question": "Would you like to secure bad debt cover?",
-      "a": "Yes",
+      "options":{
+        "a": "Yes",
       "b": "No"
+      }
     },
     {
       "id": 4,
       "question": "How important is it to you to be insured against damage to rented property?",
-      "a": "important",
+     "options":{
+       "a": "important",
       "b": "Unimportant"
+     }
     },
     {
       "id": 5,
       "question": "Are you the owner of one or more properties?",
       "validation": "*",
-      "a": "Yes",
-      "b": "No"
+      "options":{
+        "a": "Yes",
+        "b": "No"
+      }
     },
     {
       "id": 6,
       "question": "Do you own a property you live in?",
-      "a": "Yes, domestically and internationally",
-      "b": "No"
+      "validation":"*",
+      "options":{
+        "a": "Yes, domestically and internationally",
+        "b": "Yes, internationally",
+        "c": "Yes, domestically",
+        "d": "No"
+      }
+     
     },
     {
       "id": 7,
       "question": "Do you have one or more rented properties?",
-      "a": "Yes, domestically and internationally",
-      "b": "No"
+      "options":{
+        "a": "Yes",
+        "b": "No"
+      }
+    
     },
     {
       "id": 8,
       "question": "Would you like to build or remodel something in the near future?",
-      "a": "Yes",
-      "b": "No"
+      "options":{
+       "a": "Yes",
+        "b": "No"
+      }
+ 
     },
     {
       "id": 9,
       "question": "How important is it to you to protect yourself against losing your keys at work?",
-      "a": "important",
-      "b": "Unimportant"
+      "options":{
+        "a": "important",
+        "b": "Unimportant"
+         }
     },
     {
       "id": 10,
       "question": "Do you want to secure the loss of private keys?",
-      "a": "Yes",
-      "b": "No"
+      "a": "important",
+      "b": "Unimportant"
     }
   ]
 }

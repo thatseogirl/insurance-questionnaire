@@ -20,6 +20,7 @@ export default function Question({
 }) {
     return (
         <QuestionStyle className={shake ? "shake" : ""}>
+
             <Progress width={width} />
 
             {currentQuestionPosition === totalQuestions ? (
