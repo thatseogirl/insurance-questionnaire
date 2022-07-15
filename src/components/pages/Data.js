@@ -18,10 +18,7 @@ export default function Data({ questions, handleChange }) {
                             display: "inline-block",
                         }}
                     />
-                    <span>{questions.question}</span>
-                    <span style={{ color: "red", marginLeft: "5px" }}>
-                        {questions.validation}
-                    </span>
+                    <span>{questions.text}</span>
                 </Text>
                 <Grid>
                     {questions.options && Object.keys(questions.options).map((optionKey, optionIndex) => {

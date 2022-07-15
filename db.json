@@ -2,8 +2,7 @@
   "questionnaire": [
     {
       "id": 1,
-      "question": "Who do you want to insure?",
-      "validation": "*",
+      "text": "Who do you want to insure?",
       "options": {
         "a": "My family with children",
         "b": "Me and my Partner",
@@ -13,7 +12,7 @@
     },
     {
       "id": 2,
-      "question": "Are you a civil servant or employed in the public sector?",
+      "text": "Are you a civil servant or employed in the public sector?",
       "options":{
          "a": "Yes",
         "b": "No"
@@ -21,7 +20,7 @@
     },
     {
       "id": 3,
-      "question": "Would you like to secure bad debt cover?",
+      "text": "Would you like to secure bad debt cover?",
       "options":{
         "a": "Yes",
       "b": "No"
@@ -29,7 +28,7 @@
     },
     {
       "id": 4,
-      "question": "How important is it to you to be insured against damage to rented property?",
+      "text": "How important is it to you to be insured against damage to rented property?",
      "options":{
        "a": "important",
       "b": "Unimportant"
@@ -37,8 +36,7 @@
     },
     {
       "id": 5,
-      "question": "Are you the owner of one or more properties?",
-      "validation": "*",
+      "text": "Are you the owner of one or more properties?",
       "options":{
         "a": "Yes",
         "b": "No"
@@ -46,8 +44,7 @@
     },
     {
       "id": 6,
-      "question": "Do you own a property you live in?",
-      "validation":"*",
+      "text": "Do you own a property you live in?",
       "options":{
         "a": "Yes, domestically and internationally",
         "b": "Yes, internationally",
@@ -58,7 +55,7 @@
     },
     {
       "id": 7,
-      "question": "Do you have one or more rented properties?",
+      "text": "Do you have one or more rented properties?",
       "options":{
         "a": "Yes",
         "b": "No"
@@ -67,7 +64,7 @@
     },
     {
       "id": 8,
-      "question": "Would you like to build or remodel something in the near future?",
+      "text": "Would you like to build or remodel something in the near future?",
       "options":{
        "a": "Yes",
         "b": "No"
@@ -76,7 +73,7 @@
     },
     {
       "id": 9,
-      "question": "How important is it to you to protect yourself against losing your keys at work?",
+      "text": "How important is it to you to protect yourself against losing your keys at work?",
       "options":{
         "a": "important",
         "b": "Unimportant"
@@ -84,7 +81,7 @@
     },
     {
       "id": 10,
-      "question": "Do you want to secure the loss of private keys?",
+      "text": "Do you want to secure the loss of private keys?",
       "options":{
         "a": "important",
         "b": "Unimportant"
