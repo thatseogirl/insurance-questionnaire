@@ -48,7 +48,7 @@ function App() {
     setShake(true);
 
     // Buttons stops to shake after 2 seconds
-    setTimeout(() => setShake(false), 1000);
+    setTimeout(() => setShake(false), 400);
   };
 
   //go to next question
@@ -58,7 +58,7 @@ function App() {
     setShake(true);
 
     // Buttons stops to shake after 2 seconds
-    setTimeout(() => setShake(false), 1000);
+    setTimeout(() => setShake(false), 400);
   };
 
   //handle radio
