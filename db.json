@@ -85,8 +85,11 @@
     {
       "id": 10,
       "question": "Do you want to secure the loss of private keys?",
-      "a": "important",
-      "b": "Unimportant"
+      "options":{
+        "a": "important",
+        "b": "Unimportant"
+      }
+   
     }
   ]
 }
