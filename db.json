@@ -5,10 +5,7 @@
       "question": "Who do you want to insure?",
       "validation": "*",
       "a": "My family with children",
-      "b": "Me without a child",
-      "c": "My family without children",
-      "d": "Me and my Partner",
-      "e": "Me with a child"
+      "b": "Me and my Partner"
     },
     {
       "id": 2,
@@ -38,18 +35,14 @@
     {
       "id": 6,
       "question": "Do you own a property you live in?",
-      "a": "Yes Domestic",
-      "b": "Yes abroad",
-      "c": "Yes, domestically and internationally",
-      "d": "No"
+      "a": "Yes, domestically and internationally",
+      "b": "No"
     },
     {
       "id": 7,
       "question": "Do you have one or more rented properties?",
-      "a": "Yes Domestic",
-      "b": "Yes abroad",
-      "c": "Yes, domestically and internationally",
-      "d": "No"
+      "a": "Yes, domestically and internationally",
+      "b": "No"
     },
     {
       "id": 8,
@@ -68,13 +61,6 @@
       "question": "Do you want to secure the loss of private keys?",
       "a": "Yes",
       "b": "No"
-    },
-    {
-      "id": 11,
-      "question": "Would you like to be insured abroad?",
-      "a": "Yes, up to a months",
-      "b": "Yes, several months",
-      "c": "No"
     }
   ]
 }

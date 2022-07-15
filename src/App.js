@@ -18,9 +18,10 @@ const theme = {
 function App() {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionPosition, setCurrentQuestionPosition] = useState(0);
+  const [width, setWidth] = useState(0);
+  const [totalQuestions, setTotalQuestions] = useState(0);
   const [isChecked, setIsChecked] = useState(false);
-  const [width, setWidth] = useState(0)
-  const [totalQuestions, setTotalQuestions] = useState(0)
+  const [shake, setShake] = useState(false);
 
   //getFetched Data
   useEffect(() => {
@@ -44,12 +45,20 @@ function App() {
   const prevQuestion = async () => {
     setCurrentQuestionPosition(currentQuestionPosition - 1);
     setWidth((currentQuestionPosition - 1) * 10 + "%");
+    setShake(true);
+
+    // Buttons stops to shake after 2 seconds
+    setTimeout(() => setShake(false), 2000);
   };
 
   //go to next question
   const nextQuestion = async () => {
     setCurrentQuestionPosition(currentQuestionPosition + 1);
     setWidth((currentQuestionPosition + 1) * 10 + "%");
+    setShake(true);
+
+    // Buttons stops to shake after 2 seconds
+    setTimeout(() => setShake(false), 1000);
   };
 
   //handle radio
@@ -67,10 +76,12 @@ function App() {
             questions={questions}
             nextQuestion={nextQuestion}
             prevQuestion={prevQuestion}
-            isChecked={handleChange}
+            handleChange={handleChange}
             width={width}
             currentQuestionPosition={currentQuestionPosition}
             totalQuestions={totalQuestions}
+            isChecked={isChecked}
+            shake={shake}
           />
         </Container>
       </>

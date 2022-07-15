@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const QuestionStyle = styled.div`
+export const QuestionStyle = styled.section`
   background-color: ${({ theme }) => theme.colors.question};
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   position: absolute;
@@ -101,12 +101,11 @@ export const ButtonNext = styled.button`
 `;
 
 export const FeedBack = styled.div`
- display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
- margin-top: 7em;
- font-weight: bold;
- font-size: 4vh; 
- `;
-
+  margin-top: 7em;
+  font-weight: bold;
+  font-size: 4vh;
+`;

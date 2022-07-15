@@ -19,33 +19,22 @@ export default function Data({ questions, handleChange }) {
                         }}
                     />
                     <span>{questions.question}</span>
-                    <span style={{ color: "red", marginLeft: "5px" }}>{questions.validation}</span>
+                    <span style={{ color: "red", marginLeft: "5px" }}>
+                        {questions.validation}
+                    </span>
                 </Text>
 
                 <Grid>
                     <Border>
-                        <input type='radio' onChange={handleChange} />
+                        <input type='checkbox' onChange={handleChange} value='a' />
                         <label htmlFor='question'>{questions.a}</label>
                     </Border>
                     <Border>
-                        <input type='radio' onChange={handleChange} />
+                        <input type='checkbox' onChange={handleChange} value='b' />
                         <label htmlFor='question'>{questions.b}</label>
                     </Border>
-                    <Border>
-                        <input type='radio' onChange={handleChange} />
-                        <label htmlFor='question'>{questions.c}</label>
-                    </Border>
-                    <Border>
-                        <input type='radio' onChange={handleChange} />
-                        <label htmlFor='question'>{questions.d}</label>
-                    </Border>
-                    <Border>
-                        <input type='radio' onChange={handleChange} />
-                        <label htmlFor='question'>{questions.e}</label>
-                    </Border>
                 </Grid>
-
             </QuestionnaireSection>
         </>
-    )
+    );
 }
