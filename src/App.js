@@ -52,15 +52,22 @@ function App() {
 
   //go to next question
   const nextQuestion = async () => {
+    deselectRadio()
     setCurrentQuestionPosition(currentQuestionPosition + 1);
     setWidth((currentQuestionPosition + 1) * 10 + "%");
     animate()
   };
 
   //handle radio
-  const handleChange = () => {
-    setIsChecked(!isChecked);
-  };
+  const handleChange = (e) => {
+    setIsChecked(e.target.isChecked)
+  }
+
+  //deselect radio
+  const deselectRadio = () => {
+    let allRadio = document.querySelectorAll('.radioBtn');
+    allRadio.forEach((value) => value.checked = false)
+  }
   const animate = () => {
     setShake(!shake);
     setTimeout(() => setShake(false), 400);

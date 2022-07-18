@@ -21,14 +21,22 @@ export default function Data({ questions, handleChange }) {
                     <span>{questions.text}</span>
                 </Text>
                 <Grid>
-                    {questions.options && Object.keys(questions.options).map((optionKey, optionIndex) => {
-                        return (
-                            <Border key={optionIndex}>
-                                <input type={questions.type ? "checkbox" : "radio"} onChange={handleChange} value='a' />
-                                <label htmlFor='question'>{questions.options[optionKey]}</label>
-                            </Border>
-                        );
-                    })}
+                    {questions.options &&
+                        Object.keys(questions.options).map((optionKey, optionIndex) => {
+                            return (
+                                <Border key={optionIndex}>
+                                    <input
+                                        type={questions.type}
+                                        onChange={handleChange}
+                                        value={questions.optionKey}
+                                        className='radioBtn'
+                                    />
+                                    <label htmlFor='question'>
+                                        {questions.options[optionKey]}
+                                    </label>
+                                </Border>
+                            );
+                        })}
                 </Grid>
             </QuestionnaireSection>
         </>
