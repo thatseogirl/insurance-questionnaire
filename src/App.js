@@ -36,7 +36,7 @@ function App() {
 
   //fetch data
   const fetchQuestions = async () => {
-    const respond = await fetch("http://localhost:5000/questionnaire");
+    const respond = await fetch("https://my-json-server.typicode.com/thatseogirl/insurance-questionnaire/questionnaire");
     const data = await respond.json();
     return data;
   };
