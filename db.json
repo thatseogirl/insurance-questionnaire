@@ -8,40 +8,50 @@
         "b": "Me and my Partner",
         "c": "Me and my child",
         "d":  "Me alone"
-      }
+      },
+      "type": "checkbox"
     },
+
     {
       "id": 2,
       "text": "Are you a civil servant or employed in the public sector?",
       "options":{
          "a": "Yes",
         "b": "No"
-      }
+      },
+      "type": "radio"
     },
+
     {
       "id": 3,
       "text": "Would you like to secure bad debt cover?",
       "options":{
         "a": "Yes",
       "b": "No"
-      }
+      },
+      "type": "radio"
     },
+
     {
       "id": 4,
       "text": "How important is it to you to be insured against damage to rented property?",
      "options":{
        "a": "important",
       "b": "Unimportant"
-     }
+     },
+     "type": "radio"
     },
+
     {
       "id": 5,
       "text": "Are you the owner of one or more properties?",
       "options":{
         "a": "Yes",
         "b": "No"
-      }
+      },
+      "type": "radio"
     },
+
     {
       "id": 6,
       "text": "Do you own a property you live in?",
@@ -50,43 +60,48 @@
         "b": "Yes, internationally",
         "c": "Yes, domestically",
         "d": "No"
-      }
-     
+      },
+     "type": "radio"
     },
+
     {
       "id": 7,
       "text": "Do you have one or more rented properties?",
       "options":{
         "a": "Yes",
         "b": "No"
-      }
-    
+      },
+      "type": "radio"
     },
+
     {
       "id": 8,
       "text": "Would you like to build or remodel something in the near future?",
       "options":{
        "a": "Yes",
         "b": "No"
-      }
- 
+      },
+      "type": "radio"
     },
+
     {
       "id": 9,
       "text": "How important is it to you to protect yourself against losing your keys at work?",
       "options":{
         "a": "important",
         "b": "Unimportant"
-         }
+         },
+         "type": "radio"
     },
+
     {
       "id": 10,
       "text": "Do you want to secure the loss of private keys?",
       "options":{
         "a": "important",
         "b": "Unimportant"
-      }
-   
+      },
+      "type": "radio"
     }
   ]
 }

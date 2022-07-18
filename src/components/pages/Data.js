@@ -24,7 +24,7 @@ export default function Data({ questions, handleChange }) {
                     {questions.options && Object.keys(questions.options).map((optionKey, optionIndex) => {
                         return (
                             <Border key={optionIndex}>
-                                <input type='checkbox' onChange={handleChange} value='a' />
+                                <input type={questions.type ? "checkbox" : "radio"} onChange={handleChange} value='a' />
                                 <label htmlFor='question'>{questions.options[optionKey]}</label>
                             </Border>
                         );

@@ -56,11 +56,11 @@ export const Text = styled.h3`
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px 35px;
+  gap: 20px;
   padding: 1em 0.25em;
   @media (max-width: ${({ theme }) => theme.mobile}) {
- grid-template-columns: 1fr;
- gap: 20px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   }
 `;
 
@@ -69,6 +69,11 @@ export const Border = styled.div`
   border-radius: 5px;
   border: 1px solid #dddddd;
   padding: 0.75em 0.25em;
+
+  &:hover{
+    border: 1px solid #2955a8;
+    cursor: pointer;
+  }
 `;
 
 export const Flex = styled.div`

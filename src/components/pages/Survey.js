@@ -2,6 +2,7 @@ import React from "react";
 import { ButtonNext, FeedBack, Flex } from "../styles/Question.styled";
 
 export default function Survey() {
+
     return (
         <>
             <FeedBack>
@@ -9,7 +10,7 @@ export default function Survey() {
             </FeedBack>
 
             <Flex>
-                <ButtonNext onClick={() => window.location.reload()}>Reset</ButtonNext>
+                <ButtonNext onClick={(() => window.location.reload())}>Reset</ButtonNext>
             </Flex>
         </>
     );

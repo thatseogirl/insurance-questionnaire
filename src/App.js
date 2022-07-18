@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/pages/Home";
 import { ThemeProvider } from "styled-components";
 import Question from "./components/pages/Question";
 import SideNavigation from "./components/pages/SideNavigation";
@@ -67,21 +69,28 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <GlobalStyle />
-        <Container>
-          <SideNavigation />
-          <Question
-            questions={questions}
-            nextQuestion={nextQuestion}
-            prevQuestion={prevQuestion}
-            handleChange={handleChange}
-            width={width}
-            currentQuestionPosition={currentQuestionPosition}
-            totalQuestions={totalQuestions}
-            isChecked={isChecked}
-            shake={shake}
-          />
-        </Container>
+        <BrowserRouter>
+          <GlobalStyle />
+          <Container>
+            <SideNavigation />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="survey" element={
+                <Question
+                  questions={questions}
+                  nextQuestion={nextQuestion}
+                  prevQuestion={prevQuestion}
+                  handleChange={handleChange}
+                  width={width}
+                  currentQuestionPosition={currentQuestionPosition}
+                  totalQuestions={totalQuestions}
+                  isChecked={isChecked}
+                  shake={shake}
+                />
+              } />
+            </Routes>
+          </Container>
+        </BrowserRouter>
       </>
     </ThemeProvider>
   );
