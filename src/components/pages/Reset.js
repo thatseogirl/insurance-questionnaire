@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import {
     ButtonNext,
     FeedBack,
@@ -6,6 +7,7 @@ import {
     from "../styles/Question.styled";
 
 export default function Reset() {
+    const goBack = useNavigate()
     return (
         <>
             <FeedBack>
@@ -13,7 +15,7 @@ export default function Reset() {
             </FeedBack>
 
             <Flex>
-                <ButtonNext onClick={(() => window.location.reload(false))}>Reset</ButtonNext>
+                <ButtonNext onClick={() => goBack("/")}>Reset</ButtonNext>
             </Flex>
         </>
     );
