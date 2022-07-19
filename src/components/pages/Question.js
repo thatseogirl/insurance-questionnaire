@@ -6,7 +6,7 @@ import {
     ButtonNext,
 } from "../styles/Question.styled";
 import Progress from "./Progress";
-import Survey from "./Survey";
+import Reset from "./Reset";
 
 export default function Question({
     questions,
@@ -17,14 +17,14 @@ export default function Question({
     totalQuestions,
     handleChange,
     shake,
+    isChecked,
 }) {
     return (
         <QuestionStyle className={shake ? "shake" : ""}>
-
             <Progress width={width} />
 
             {currentQuestionPosition === totalQuestions ? (
-                <Survey />
+                <Reset />
             ) : (
                 <Data questions={questions} handleChange={handleChange} />
             )}

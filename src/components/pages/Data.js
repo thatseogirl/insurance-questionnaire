@@ -4,10 +4,11 @@ import {
     Border,
     Text,
 } from "../styles/Question.styled";
+import { memo } from "react";
 
 import { BiRightArrowAlt } from "react-icons/bi";
 
-export default function Data({ questions, handleChange }) {
+function Data({ questions, handleChange }) {
     return (
         <>
             <QuestionnaireSection>
@@ -30,6 +31,8 @@ export default function Data({ questions, handleChange }) {
                                         onChange={handleChange}
                                         value={questions.optionKey}
                                         className='radioBtn'
+                                        name="radio"
+                                        id={questions.optionIndex}
                                     />
                                     <label htmlFor='question'>
                                         {questions.options[optionKey]}
@@ -42,3 +45,6 @@ export default function Data({ questions, handleChange }) {
         </>
     );
 }
+
+
+export default memo(Data);

@@ -45,7 +45,7 @@ function App() {
 
   //go to previous questions
   const prevQuestion = async () => {
-    setCurrentQuestionPosition(currentQuestionPosition - 1);
+    setCurrentQuestionPosition((currentQuestionPosition) => currentQuestionPosition - 1);
     setWidth((currentQuestionPosition - 1) * 10 + "%");
     animate()
   };
@@ -53,14 +53,14 @@ function App() {
   //go to next question
   const nextQuestion = async () => {
     deselectRadio()
-    setCurrentQuestionPosition(currentQuestionPosition + 1);
+    setCurrentQuestionPosition((currentQuestionPosition) => currentQuestionPosition + 1);
     setWidth((currentQuestionPosition + 1) * 10 + "%");
     animate()
   };
 
   //handle radio
   const handleChange = (e) => {
-    setIsChecked(e.target.isChecked)
+    setIsChecked(e.currentTarget.isChecked)
   }
 
   //deselect radio
@@ -68,6 +68,7 @@ function App() {
     let allRadio = document.querySelectorAll('.radioBtn');
     allRadio.forEach((value) => value.checked = false)
   }
+
   const animate = () => {
     setShake(!shake);
     setTimeout(() => setShake(false), 400);
