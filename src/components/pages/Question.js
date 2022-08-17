@@ -17,7 +17,6 @@ export default function Question({
     totalQuestions,
     handleChange,
     shake,
-    isChecked,
 }) {
     return (
         <QuestionStyle className={shake ? "shake" : ""}>
